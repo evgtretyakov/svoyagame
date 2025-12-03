@@ -1,0 +1,120 @@
+.controls {
+  background: rgba(30, 30, 46, 0.8);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.controls h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #00d4ff;
+  font-size: 1.8rem;
+}
+
+.control-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+}
+
+.start-btn {
+  background: linear-gradient(145deg, #00b894, #00a085);
+}
+
+.start-btn:hover {
+  background: linear-gradient(145deg, #00a085, #00b894);
+  transform: translateY(-3px);
+}
+
+.next-btn {
+  background: linear-gradient(145deg, #0984e3, #0767b1);
+}
+
+.next-btn:hover {
+  background: linear-gradient(145deg, #0767b1, #0984e3);
+  transform: translateY(-3px);
+}
+
+.reset-btn {
+  background: linear-gradient(145deg, #d63031, #b33939);
+}
+
+.reset-btn:hover {
+  background: linear-gradient(145deg, #b33939, #d63031);
+  transform: translateY(-3px);
+}
+
+.timer-display {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #ffcc00;
+  gap: 10px;
+}
+
+.timer-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ff9d;
+}
+
+.timer-progress {
+  height: 8px;
+  background: linear-gradient(90deg, #00ff9d, #00d4ff);
+  border-radius: 4px;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
+
+.game-status {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+}
+
+.game-status p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.game-status strong {
+  color: #ffcc00;
+}
+
+.modal-active {
+  color: #ff6b6b;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
