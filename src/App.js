@@ -11,8 +11,7 @@ function App() {
     <GameProvider>
       <div className="App">
         <header className="App-header">
-          <h1>Своя Игра - Корпоратив</h1>
-          <p>Упрощенная версия Jeopardy!</p>
+          <h1>Своя Игра для NY вечеринки кластера контент-маркетинг и PR</h1>
         </header>
         <main className="App-main">
           <div className="game-container">

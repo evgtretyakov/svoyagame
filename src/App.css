@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  max-width: 1400px;
+  /*max-width: 1400px;*/
   margin: 0 auto;
   padding: 20px;
 }
@@ -45,7 +45,7 @@
 }
 
 .right-panel {
-  flex: 2;
+  flex: 3;
   min-width: 500px;
 }
 

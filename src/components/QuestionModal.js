@@ -12,6 +12,7 @@ const QuestionModal = () => {
     answerQuestion,
     passTurn,
     setIsModalOpen,
+      timerStartValue,
   } = useGame();
 
   const [showAnswer, setShowAnswer] = useState(false);
@@ -45,7 +46,7 @@ const QuestionModal = () => {
         <div className="modal-body">
           <p className="question-text">{selectedQuestion.text}</p>
 
-          {showAnswer || isTimeUp ? (
+          {showAnswer ? (
             <div className="answer-section">
               <h4>Ответ:</h4>
               <p className="answer-text">{selectedQuestion.answer}</p>
@@ -64,7 +65,7 @@ const QuestionModal = () => {
             <div className="timer-bar">
               <div
                 className="timer-fill"
-                style={{ width: `${(timer / 20) * 100}%` }}
+                style={{ width: `${(timer / timerStartValue) * 100}%` }}
               />
             </div>
           </div>

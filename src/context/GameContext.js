@@ -28,13 +28,14 @@ const saveState = (state) => {
 
 export const GameProvider = ({ children }) => {
   const loaded = loadState();
+  const timerStartValue = 60;
 
   const [players, setPlayers] = useState(loaded?.players || []);
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(loaded?.currentPlayerIndex || 0);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [timer, setTimer] = useState(20);
+  const [timer, setTimer] = useState(timerStartValue);
   const [timerActive, setTimerActive] = useState(false);
   const [gameStarted, setGameStarted] = useState(loaded?.gameStarted || false);
   const [answeredQuestions, setAnsweredQuestions] = useState(loaded?.answeredQuestions || []);
@@ -79,7 +80,7 @@ export const GameProvider = ({ children }) => {
     setSelectedCategory(category);
     setSelectedQuestion(question);
     setIsModalOpen(true);
-    setTimer(20);
+    setTimer(timerStartValue);
     setTimerActive(true);
   };
 
@@ -158,6 +159,7 @@ export const GameProvider = ({ children }) => {
     setGameStarted,
     setCurrentPlayerIndex,
     setIsModalOpen,
+      timerStartValue,
   };
 
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
