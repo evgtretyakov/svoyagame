@@ -8,11 +8,10 @@ const QuestionModal = () => {
     selectedCategory,
     selectedQuestion,
     timer,
-    timerActive,
     answerQuestion,
     passTurn,
     setIsModalOpen,
-      timerStartValue,
+    timerStartValue,
   } = useGame();
 
   const [showAnswer, setShowAnswer] = useState(false);
