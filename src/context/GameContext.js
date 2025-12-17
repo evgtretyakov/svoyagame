@@ -28,7 +28,7 @@ const saveState = (state) => {
 
 export const GameProvider = ({ children }) => {
   const loaded = loadState();
-  const timerStartValue = 60;
+  const timerStartValue = 20;
 
   const [players, setPlayers] = useState(loaded?.players || []);
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(loaded?.currentPlayerIndex || 0);
